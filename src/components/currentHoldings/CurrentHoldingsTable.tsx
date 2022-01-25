@@ -9,7 +9,6 @@ const mapCurrentHoldings = (holding: IHolding) => <CurrentHoldingsRow holding={h
 
 const CurrentHoldingsTable = () => {
   const { currentHoldings } = useCurrentHoldings();
-  console.log('currentHoldings', currentHoldings);
   return (
     <TableContainer>
       <Table>
