@@ -12,6 +12,13 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
+  settings: {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
   plugins: ['react', '@typescript-eslint'],
   rules: {
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
@@ -24,5 +31,15 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
+    'import/extensions': 'off',
+    'import/order': 'off'
   },
+  overrides: [
+    {
+      files: ['*_spec.js'],
+      rules: {
+        'no-undef': 0,
+      },
+    },
+  ],
 };
