@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb', 'prettier'],
+  extends: ['plugin:react/recommended', 'prettier'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -13,11 +13,11 @@ module.exports = {
     sourceType: 'module',
   },
   settings: {
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    }
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
@@ -32,7 +32,7 @@ module.exports = {
       },
     ],
     'import/extensions': 'off',
-    'import/order': 'off'
+    'import/order': 'off',
   },
   overrides: [
     {
